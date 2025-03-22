@@ -1,0 +1,105 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribuição e Empacotamento
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Logs de instalador
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Testes unitários e relatórios de cobertura
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Arquivos de tradução
+*.mo
+*.pot
+
+# Configurações específicas do Django
+*.log
+local_settings.py
+db.sqlite3
+
+# Configurações específicas do Flask
+instance/
+.webassets-cache
+
+# Configurações do Scrapy
+.scrapy
+
+# Documentação gerada pelo Sphinx
+docs/_build/
+
+# Configurações do PyBuilder
+target/
+
+# Notebooks Jupyter
+.ipynb_checkpoints
+
+# Configurações do IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Arquivo de agendamento do Celery Beat
+celerybeat-schedule
+
+# Variáveis de ambiente
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Configurações do Spyder
+.spyderproject
+.spyproject
+
+# Configurações do Rope
+.ropeproject
+
+# Documentação do MkDocs
+/site
+
+# Cache do mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
