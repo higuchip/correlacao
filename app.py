@@ -49,11 +49,21 @@ if uploaded_file is not None:
         var1 = st.selectbox("Selecione a variável 1", colunas)
         var2 = st.selectbox("Selecione a variável 2", colunas, index=1 if len(colunas) > 1 else 0)
 
-        # Remove valores nulos
-        dados1 = df[var1].dropna()
-        dados2 = df[var2].dropna()
+        # Remove valores nulos e converte para float:
+        # Converte para string, substitui vírgula por ponto e transforma em numérico
+        dados1 = pd.to_numeric(
+            df[var1].astype(str).str.replace(',', '.'), errors='coerce'
+        ).dropna().astype(float)
+        dados2 = pd.to_numeric(
+            df[var2].astype(str).str.replace(',', '.'), errors='coerce'
+        ).dropna().astype(float)
 
-        # 3. Teste de Normalidade
+        # Exibe os tipos de dados para conferência
+        # st.write("Tipos de dados após conversão:")
+        # st.write(f"{var1}: {dados1.dtype}")
+        # st.write(f"{var2}: {dados2.dtype}")
+
+        # 3. Teste de Normalidade (Shapiro-Wilk)
         st.header("Teste de Normalidade (Shapiro-Wilk)")
         stat1, p1 = shapiro(dados1)
         stat2, p2 = shapiro(dados2)
